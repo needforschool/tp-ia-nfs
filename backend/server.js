@@ -2,8 +2,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const listingsRoutes = require('./routes/listings');
-const analyticsRoutes = require('./routes/analytics');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -18,8 +16,6 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch(err => console.error('Erreur de connexion:', err));
 
 // Routes
-app.use('/api/listings', listingsRoutes);
-app.use('/api/analytics', analyticsRoutes);
 
 app.listen(PORT, () => {
   console.log(`Serveur démarré sur le port ${PORT}`);
