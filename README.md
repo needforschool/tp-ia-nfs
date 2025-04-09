@@ -12,7 +12,7 @@
 
 ```bash
 git clone <votre-repo>
-cd tp-ia-antoine-charlotte-said
+cd tp-ia-nfs
 ```
 
 ### 2. Configuration de MongoDB Atlas
