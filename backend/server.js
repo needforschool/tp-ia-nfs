@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://saidicharlotte690:hNg7o3VsdiYcdrbK@cluster0.lnjjaig.mongodb.net/image')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connecté à MongoDB Atlas'))
   .catch(err => console.error('Erreur de connexion:', err));
 
